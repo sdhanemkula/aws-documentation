@@ -28,9 +28,5 @@ Notes:
 * What is our tagging strategy for tables?
 * What is our data retention (TTL) strategy for any sensitive data?
 
-## Vpc endpoint strategy (ETS)
-
-**TODO**
-
-## Vpc endpoint policy (ETS)
+## Vpc endpoint policy
 VPC endpoint policies are NOT supported by dynamoDB.

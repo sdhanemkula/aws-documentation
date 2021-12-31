@@ -21,8 +21,7 @@ The VPC Endpoint types utilized depend on AWS service to connect to
 * Can't be tranferred from one service or vpc to another
 
 ## usage
-* VPC endpoints will be created by ETS team (NOT Developers)
-* A VPC endpoint policies will be created by the ETS team but only providing access/deny at a generic account level. It is assumed resource level restrictions (e.g. QueueA should be done using resource policies)
+* VPC endpoints should be created by security/networking team (NOT Developers)
 
 ## Relevant Links
 

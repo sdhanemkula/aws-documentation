@@ -8,8 +8,6 @@ Amazon API gateway provides numerous means to control access.
 * **authentication/authorization** - resource policies, IAM roles/policies, IAM tags, vpc endpoint policies, custom authorizors, cognito
 * **access control** -> CORS, client SSL certs, AWS WAF
 
-**TODO: Need to add more info here**
-
 Please refer to the api gateway developers guide for more information.
 
 # Policy
@@ -36,10 +34,8 @@ API gateway policy ensures:
 * Method should NOT have AuthorizationType set to 'NONE'
 
 
-**TODO: Need to add more info here**
-
-## Vpc endpoint policy (ETS)
-VPC endpoint policy will be created by ETS team for a given account. 
+## Vpc endpoint policy
+VPC endpoint policy should be created for a given account. 
 
 This policy grants:
 * basic network access security
@@ -75,7 +71,6 @@ This policy grants:
 ## Api gateway Auth:ResourcePolicy
 This section documents various examples of how to restric access to a gateway
 
-**TODO: Need to add more examples here**
 
 **Restrict any traffic NOT coming from our VPC**
 ```yaml

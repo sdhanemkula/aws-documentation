@@ -1,7 +1,9 @@
 # AWS Security Guidelines
 This project contains all relevant AWS security related guidelines for using MANAGED SERVICES within AWS.
 
-Developers should utilize this repo when familiarizing themseles with using various AWS managed services and how they should be applying security w/in their usage in applications.
+These questions/guidelines were developed over time when building various projects w/in AWS as well as security reviews, etc.
+
+Developers should utilize this info when familiarizing themseles with using various AWS managed services and how they should be applying security w/in their usage in applications.
 
 The guidelines are categorized using a combination of the AWS security pillars w/additional relevant security categories.
 
@@ -9,7 +11,6 @@ The guidelines are categorized using a combination of the AWS security pillars w
 * **Detective Controls** - What detective controls do we require to ensure proper security monitoring/responding to events?
 * **Infrastructure Protection/Nothing Backdoored** - How are we protecting our infrastructure?
 * **Data Protection** - How are we protecting our data?
-* **Incident Response** - How are we responding to security incidents?
 * **Secrets** - How are ensuring our secrets are private?
 * **Deployment** - How are ensuring our deployments are secure?
 
@@ -17,7 +18,7 @@ The guidelines are categorized using a combination of the AWS security pillars w
 ## Documentation Standards
 
 * Each section contains two files: question.md and guidelines.md
-* Please use separate directory for each AWS security pillar category!
+
 
 ## References
 This section provides important links related to these guidelines.

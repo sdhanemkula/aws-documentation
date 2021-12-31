@@ -18,11 +18,6 @@ Amazon Lambda by default runs as public service!
 * Lambda concurrent function level limits
 
 
-## Vpc endpoint policy (ETS)
-VPC endpoint policy will NOT be created by ETS team for a given account. 
-
-**TODO:Need to understand this more**
-
 ## Lambda Role security
 According to AWS documentation if we specify a role no lambda cloudformation policies will be applied thus any developer policies attempting to override security will not be assumed.
 

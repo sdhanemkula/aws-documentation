@@ -14,9 +14,8 @@ Additional notes:
 * All glue job data reading/writing from S3 use S3 buckets thus ensuring data encryption at rest by the default bucket policy
 * Cloudwatch log data is assumed encrypted by default by the cloud watch service
 * Any glue job definitions should NOT utilize hard coded passwords, tokens, etc. For example, product glue jobs reading information from Cassandra utilize AWS secrets manager for all connection info.
-* All glue jobs permissions to all external services are handled via IAM role policies defined by ETS (see section below)
+* All glue jobs permissions to all external services are handled via IAM role policies 
 
-**TODO: need to figure out how other teams are specifying connection information**
 
 **Open items include**
 * Single Dev 'admin' role
@@ -24,7 +23,7 @@ Additional notes:
 * Job bookmark encrypted
 * Developer endpoint security settings
 
-## Vpc endpoint policy (ETS)
+## Vpc endpoint policy
 VPC endpoint policy are NOT supported by Glue
 
 ## Sample glue policy 

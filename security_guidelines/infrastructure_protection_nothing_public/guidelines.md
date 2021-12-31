@@ -11,14 +11,14 @@ Relevant guidelines to follow include:
 <br/>
 
 * **No infrastructure should ever be defined “public” by DEV in IaaC**
-    * True “Public” resources must be managed by ETS (e.g. API gateways, S3 buckets, etc.)
+    * True “Public” resources must be managed by Admin team (e.g. API gateways, S3 buckets, etc.)
     * Rationale: limit potential security event by developer misconfiguration, etc.
 
 <br/>
 
 * **When using managed services ‘traffic’ should be contained w/in the single AWS account**
     * E.g. SQS queue traffic limited to single account, different queues for DEV/MOD/PRD, etc.
-    * Exemptions are permitted but must be reviewed/configured with ETS
+    * Exemptions are permitted but must be reviewed
     * Rationale: our core IAM strategy is account based so thus limiting traffic using same means provides additional layer of protection.
 
 <br/>

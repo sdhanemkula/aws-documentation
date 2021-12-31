@@ -11,10 +11,9 @@ Additional notes:
 * Athena workgroups can be defined to assist in minimal user configuration values
 
 # Policy
-* All Athena access permissions (services) to all external services are handled via IAM role policies defined by ETS (see section below) 
-* All Athena access permissions (business users) are handled via IAM role policies defined by ETS (see section below)
+* All Athena access permissions (services) to all external services are handled via IAM role policies
+* All Athena access permissions (business users) are handled via IAM role policies
 
-**TODO: need to figure out how other teams are specifying connection information**
 
 **Open items include**
 * Single Dev 'admin' role
@@ -22,7 +21,7 @@ Additional notes:
 * Athena schema information encryption (e.g. Glue Data catalog)
 * Athena running [within a VPC interface endpoint and glue vpc endpoint](https://docs.aws.amazon.com/athena/latest/ug/interfvpc-endpoint.html)
 
-## Vpc endpoint policy (ETS)
+## Vpc endpoint policy
 VPC endpoint policy are supported by Athena but currently NOT used by development teams
 
 ## Sample athena IAM policy (service based)

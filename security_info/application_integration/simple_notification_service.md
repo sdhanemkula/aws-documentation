@@ -8,8 +8,8 @@ Amazon SNS VPC endpoints provide two ways to control access to your messages:
 * You can control which VPCs or VPCendpoints have access to your queue using a queuepolicy.
 
 # Policy
-* All topis must utilize vpc endpoints (created by ETS)
-* All topics must utilize a vpc endpoint policy (created by ETS)
+* All topis must utilize vpc endpoints
+* All topics must utilize a vpc endpoint policy
 * All topics must define policy to restrict access at the vpc endpoint
 * All topics should define policy to restrict access by principal and action
 * All topics must ensure Server Side Encryption
@@ -22,16 +22,13 @@ Amazon SNS VPC endpoints provide two ways to control access to your messages:
 * Enforce least-privledge access (topic specific)
 * Enforce encryption of data in transit
 
-## Vpc endpoint policy (ETS)
-VPC endpoint policy will be created by ETS team for a given account. 
+## Vpc endpoint policy
+VPC endpoint policy should be created by networking team for a given account. 
 
 This policy grants:
 * basic network access security
 * basic service level action permissions
 * account level principal/resource access (e.g. all queues in this account are connected to this vpc endpoint and ensure all principals have access to all resources)
-
-
-**TODO: Need sample here!!**
 
 
 ## SNS::TopicPolicy

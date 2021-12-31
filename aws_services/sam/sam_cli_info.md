@@ -73,5 +73,3 @@ export SAM_CLI_TELEMETRY=0
 
 * SAM 'build/deploy' does NOT appear to be able to connect to Nexus to pull artifacts. Assume this must be handled via Maven
 
-## Security
-* TODO

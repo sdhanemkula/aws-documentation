@@ -10,7 +10,7 @@ Relevant guidelines to follow include:
 
 <br/>
 
-* **All native AWS services must integrate with Cloud Trail (handled by ETS)**
+* **All native AWS services must integrate with Cloud Trail**
     * Required audit retention policies should be created
 
 <br/>

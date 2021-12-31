@@ -18,19 +18,6 @@ Amazon Container Service provides [security within the service](https://docs.aws
 * Container admin acess to AWS services (use VPC endpoints for all service integrations)
 * Container services exposed (IAM roles scoped to least access)
 
-**TODO: how is IAM managed here?**
-
-**Open Items include**
-* TODO
-
-
-## Vpc endpoint policy (ETS)
-
-**TODO what is our policy?**
-
-## Other Info
-
-**TODO what other relevant info is required here?**
 
 
 

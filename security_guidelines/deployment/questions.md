@@ -18,6 +18,8 @@ This page summarizes various questions to ask related to the Deployment pillar.
 
 * **Is my IaaC using any unsecure features?**
 
+<br/>
+
 * **Is my application security ready or am I just deploying to meet a deadline?**
     * If unsure STOP! This is how security incidents are created
     * If just establishing a deployment pipeline with no actual users/clients that's OK

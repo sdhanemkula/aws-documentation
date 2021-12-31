@@ -12,15 +12,11 @@ General notes:
 # Policy
 * All cloud watch log data from step functions is encrypted by default (developers required to integrate with cloud watch)
 * State machine data is encrypted at rest/transit by AWS by default
-* All service access permissions are managed by IAM roles defined by ETS (see below)
+* All service access permissions are managed by IAM roles
 
 **Open items include**
 * Restrict to VPC access only
 
-## Vpc endpoint policy (ETS)
-VPC endpoint policy are NOT created by ETS team for a given account.
-
-**TODO: define if how we should do this**
 
 ## Sample step functions IAM policy
 This sample step functions role demonstrates:

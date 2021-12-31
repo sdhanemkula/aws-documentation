@@ -7,8 +7,8 @@ Amazon SQS VPC endpoints provide two ways to control access to your messages:
 * You can control which VPCs or VPCendpoints have access to your queue using a queuepolicy.
 
 # Policy
-* All queues must utilize vpc endpoints (created by ETS)
-* All queues must utilize a vpc endpoint policy (created by ETS)
+* All queues must utilize vpc endpoints
+* All queues must utilize a vpc endpoint policy
 * All queues must define policy to restrict access at the vpc endpoint
 * All queues should define policy to restrict access by principal and action
 * All queues must ensure Server Side encryption
@@ -21,8 +21,8 @@ Amazon SQS VPC endpoints provide two ways to control access to your messages:
 * Enforce encryption of data in transit
 
 
-## Vpc endpoint policy (ETS)
-VPC endpoint policy will be created by ETS team for a given account. 
+## Vpc endpoint policy
+VPC endpoint policy will be created by networking team for a given account. 
 
 This policy grants:
 * basic network access security

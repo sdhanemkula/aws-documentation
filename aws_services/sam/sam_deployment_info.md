@@ -35,5 +35,3 @@ tags: lambda
 ## TBD Items
 * Mentions Jenkins deploy (https://plugins.jenkins.io/aws-sam/) for package and deploy steps but this is still TBD
 
-## Security
-* TODO

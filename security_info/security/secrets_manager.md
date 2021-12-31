@@ -14,9 +14,6 @@ AWS Secrets manager outlines its security policies [here](https://docs.aws.amazo
 * Secrets are restricted for cross account usage
 * Secrets access by default utilizes AWS VPC endpoints (see below)
 
-**Open items include**
-* **TODO: what items required here**
-
 
 ## Vpc endpoint policy
 VPC endpoint policy are supported by Secrets Manager and currently used by development teams.
