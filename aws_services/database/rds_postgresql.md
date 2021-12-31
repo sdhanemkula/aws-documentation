@@ -14,7 +14,7 @@ This page provides any learnings using RDS PostgreSQL instances
 ## Supportability
 * Default RDS instance creation typically does NOT enable all query logs required. As a result for engines like PostgreSQL you must update the custom parameter group to enable!
 ```
-# PostgreSQL - log_statement controls what is logged at the engine level (mod -> all update DDL statements)
+# PostgreSQL - log_statement controls what is logged at the engine level (QA -> all update DDL statements)
 log_statement: mod  (sample values: none, ddl, mod, all)
 ```
 
