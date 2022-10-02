@@ -16,7 +16,7 @@
 * Utilize Timeouts to avoid stuck executions
   - [more info here](https://docs.aws.amazon.com/step-functions/latest/dg/sfn-stuck-execution.html)
 * Integrate state machine event history with cloud watch events! This enables easy debugging of state machine history via basic log insights log queries (e.g. search through 2000 events easily).
-```
+```yaml
 # Define simple log group
 CFNStateMachineLogGroupRaJson:
   Type: AWS::Logs::LogGroup
@@ -24,7 +24,7 @@ CFNStateMachineLogGroupRaJson:
     LogGroupName: !Join ["-", ["/aws/stepfunction/product-ingest", !Ref CFNEnvPrefix, "ra-json"]]
     RetentionInDays: 14
 ```
-```
+```yaml
 # define state machine with reference to Log Group (logs events to cloud watch!)
 CFNStepFunctionsNightlyRaJson:
   Type: AWS::StepFunctions::StateMachine

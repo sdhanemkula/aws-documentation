@@ -18,7 +18,7 @@
 ## Supportability
 * IF possible utilize the existing AWS logging plugins for logging statements. This ensures better format of error messages in addition to providing requestId into each log statement (this makes grouping lambda logs SO MUCH EASIER)
 
-```
+```yaml
 ## for example in Java based lambdas add this log4j2.xml in src/main/resources
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration packages="com.amazonaws.services.lambda.runtime.log4j2">

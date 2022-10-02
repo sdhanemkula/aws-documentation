@@ -6,7 +6,7 @@
 * SAM CLI commands assume all source code AND IaaC are in same project. Location of IaaC within existing source is still TBD.
 * Deploying SAM templates requires IAM role CreateChangeSet permissions which is NOT automatically in dev IAM role
 * If using Maven based artifact builds the SAM templates must use the CodeUri: pointed to the location of the artifact
-```
+```yaml
 Type: AWS::Serverless::Function
     Properties:
       CodeUri: s3://us-east-1-dev-code/product-sam-poc/myLambdaJar.jar
@@ -14,7 +14,7 @@ Type: AWS::Serverless::Function
 
 ## Ansible Notes
 * Ansible's cloudformation module can be utilized to depoy SAM templates with minor changes
-```
+```yaml
 # Sample cloudformation module call for a SAM template.
 # Note: the additional capabilities are required for SAM deployments
 cloudformation:

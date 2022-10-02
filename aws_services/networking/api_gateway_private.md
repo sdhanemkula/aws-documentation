@@ -12,7 +12,7 @@ Setting up the gateway includes these steps:
 * Create gateway using VPC endpoint Id
 * Modify Gateway policy to include proper deny/allow permissions from only the VPC
 
-```
+```yaml
 {
    "Version": "2012-10-17",
    "Statement": [
@@ -72,7 +72,7 @@ When importing a public gateway to a private gateway there were some issues disc
 
 * The resources imported correctly with all relevant integrations but the Lambda policies were NOT created permitting the new gateway execute the lambdas. This seems like a bug in AWS. To fix you need to navigate to each resource method's Integration request and delete/re-add the lambda connection (thus forcing the policy to be added to the lambda). Checking the lambda => Permissions should show all gateway permissions like below
 
-```
+```yaml
 # Sample permissions for lambda to be invoked from API gateway resource/method
 {
     "Sid": "d60d0425-b3a7-4c15-87e6-4499fdc7157d",

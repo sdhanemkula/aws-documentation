@@ -9,7 +9,7 @@
 
 * 'sam local generate-event' is nice for creating payloads to simulate what gets sent to your lambdas!
 
-```
+```bash
 # generate a sample S3 'PUT' event
 sam local generate-event s3 put
 
@@ -22,7 +22,7 @@ sam local generate-event s3 put --bucket myBucket --key myKey | sam local invoke
 
 * Use local environment json files to configure all lambda's environment variables
 
-```
+```yaml
 # sample file contents
 {
    "S3ReaderFunction": {
@@ -41,14 +41,14 @@ sam local invoke S3ReaderFunction -e ./functions/S3Reader/sampleEvent.json --env
 
 ## Gotchas
 * invoking services running docker container on mac need to use endpointUrls
-```
+```yaml
 "http://docker.for.mac.localhost:4566" // mocked S3 service from LocalStack
 "http://docker.for.mac.localhost:8000", // Local DynamoDB service
 ```  
 
 * SAM only reads the environment variables defined in the SAM template file not what's actually passed in the environment.json file!
 
-```
+```yaml
 # environment file defines two values
 {
    "S3ReaderFunction": {

@@ -6,7 +6,7 @@ Before running any query
 
 ## Sample ACE Mule log queries
 
-```
+```sql
 -- show counts of any log messages with 'ERROR' in them by 15 minute intervals sorted by highest count first
 filter @message like /ERROR/
 | stats count(*) as exceptionCount by bin(15m)
@@ -45,7 +45,7 @@ fields @timestamp, @message
 
 ## Tomcat based query samples
 
-```
+```sql
 -- find all WARN messages in TPOS logs
 fields @timestamp, @logStream, @message
 | filter (@message like /WARN/)

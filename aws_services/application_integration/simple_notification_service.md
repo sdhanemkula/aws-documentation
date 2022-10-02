@@ -3,7 +3,7 @@
 ## General Guidelines (Topics)
 * Ensure to set the proper topic policy if using topic as destination (e.g. cloud watch events)
 
-```
+```yaml
 ## Sample cloudformation demonstrating policy to permit cloud watch to publish to
 ## topic in CFNSnsTopicproductCloudWatchNotification variable
 Effect: Allow

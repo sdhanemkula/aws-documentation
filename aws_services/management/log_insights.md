@@ -12,7 +12,7 @@
 * FILTERS apply to entire log group and will drop record if not match across logs. So for example, tomcat_localhost formats different than app log formats so may not see rows from both depending on query filter
 
 * You can parse then filter on the parsed field!
-```
+```sql
 parse @message "* * * * * *" as log_date, log_time, log_status, request, method_invoked, details
 | fields @timestamp, substr(details, 26,36) as risk_id, @message
 | filter (@message like /ERROR/) and (details like /Model response for risk/)

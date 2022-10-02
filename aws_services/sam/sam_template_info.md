@@ -2,7 +2,7 @@
 
 ## General Guidelines
 * Utilize globals for common define/override template definitions (e.g. all lambdas are java11, tags, etc.) this helps with creating smaller easier to understand templates
-```
+```yaml
 Globals:
   Function:
       Runtime: java11
@@ -15,7 +15,7 @@ Globals:
 ```
 
 * If deployment requires a mix of SAM and CF resources you must utilize a SAM template as the basis of the deployment
-```
+```yaml
 # Need to include the SAM template headers
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
@@ -24,7 +24,7 @@ Transform: AWS::Serverless-2016-10-31
 * Utilize CF Parameters for injecting parameter values to SAM resources
 
 * Since developer credentials do NOT permit creating IAM roles/policies all SAM templates must use existing IAM roles/policies in all template definitions
-```
+```yaml
 StockCheckerFunction:
 	Type: AWS::Serverless::Function
 	Properties:
@@ -42,7 +42,7 @@ StockCheckerFunction:
 ```
 
 * Utilize "Outputs" to output ARN values if Ansible scripts require outputted values
-```
+```yaml
 Outputs:
 		StockTradingStateMachineArn:
     		Description: "Stock Trading State machine ARN"

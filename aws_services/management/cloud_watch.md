@@ -6,7 +6,7 @@
 ## Security
 * When sending failure notifications via cloudwatch do NOT include PII information within the header/body of the message. It is OK to include AWS specific IDs.
 
-```
+```yaml
 ### Do this in email error notification body
 "The Glue Job prod-TransformPolicyRelations FAILED at 2020-04-09T08:44:24Z."
 
