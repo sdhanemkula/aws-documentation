@@ -12,7 +12,7 @@ This page summarizes information on API Gateway Service transformation features
 * Limited to only 1 mapping template per Content-type/Response code (e.g. 200 application/json) requires a single template
 * Can peek into output message and change response code to non 200 (e.g. 201 for created resource)
 
-```
+```javascript
 # Sample VTL associated with Integration Response Mapping Template
 # Peek into result JSON and look for "ReturnStatus:'Created' and change to 201"
 #set($inputRoot = $input.path('$'))
@@ -26,7 +26,7 @@ This page summarizes information on API Gateway Service transformation features
 
 * Can map python runtime exceptions to 500 error (and can configure the 500 Gateway response for standards if required)
 
-```
+```python
 ## Python code does this
 raise RuntimeError("Unrecoverable Error")
 
@@ -36,7 +36,7 @@ Lambda Error Regex: Unrecoverable Error.*
 
 * Can take existing JSON structure and map to new structure (must use velocity template language) to create Mapping template
 
-```
+```javascript
 # VTL example: Take result JSON and change the JSON field names
 #set($inputRoot = $input.path('$'))
 {
@@ -48,7 +48,7 @@ Lambda Error Regex: Unrecoverable Error.*
 ```
 
 * Can take existing JSON and convert to XML for response
-```
+```javascript
 # VTL example: Take JSON and change to XML
 #set($inputRoot = $input.path('$'))
 <User>

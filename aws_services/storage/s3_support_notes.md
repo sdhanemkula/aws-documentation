@@ -3,7 +3,7 @@
 The s3 support notes are mainly AWS cli commands to run to 'find' things in a bucket (usually specific to a risk id)
 These example scripts assume you have jq installed locally! [jq is here](https://stedolan.github.io/jq/)
 
-```
+```bash
 -- list the largest item in the bucket/prefix
 aws s3api list-objects --bucket us-east-1-product-raw  \
 	--prefix risk_assessments/modified_dt=2017-08-21/ | jq '[.Contents[]] | max_by(.Size)'

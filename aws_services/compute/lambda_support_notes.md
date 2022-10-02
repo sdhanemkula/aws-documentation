@@ -3,7 +3,7 @@ Cloud Watch insights can be utilized to easily search all Cloud watch logs for a
 
 This section outlines queries to run to help when diagnosing issues.
 
-```
+```sql
 ## show counts of any log messages with 'ERROR' in them by 15 minute intervals sorted by highest count first
 filter @message like /ERROR/
 | stats count(*) as exceptionCount by bin(15m)

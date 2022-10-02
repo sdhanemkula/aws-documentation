@@ -17,7 +17,7 @@
 * CloudFormation template size limit is 56K so ensure all templates fit and decompose into smaller if necessary
 
 * Do NOT change a resource name within a template definition! This confuses CloudFormation and will potentially corrupt your stack!
-```
+```yaml
 Resources:
 
   CFNStepFunctionsDoNOTChangeMe:
@@ -25,7 +25,7 @@ Resources:
 ```
 
 * Output ARNs from CloudFormation stacks if needed in Ansible scripts
-```
+```yaml
 Outputs:
   CFNStepFunctionsNightlyRaJsonResult:
     Description: Step Functions Arn
@@ -33,7 +33,7 @@ Outputs:
 ```
 
 * Utilize the AWS Systems manager store for OPS dependencies like IAM, VPC, etc.
-```
+```yaml
 Parameters:
   CFNStepFunctionsIAMRole:
     Type: 'AWS::SSM::Parameter::Value<String>'
@@ -41,7 +41,7 @@ Parameters:
 ```
 
 * Avoid using AWS Specific Parameter Types due to required extra IAM configuration
-```
+```yaml
 ## defining a parameter of this type now requires all executors to have extra EC2/IAM permissions
 Parameters:
   CFN:
@@ -50,7 +50,7 @@ Parameters:
 ```
 
 * Decompose large templates into smaller manageable templates using a combination of Ansbile and cloud Formation
-```
+```yaml
 # This example is a single template to create an entire Athena database with all table definitions
 # All table definitions are separate .j2 file included into the larger .j2 file
 # The ensures smaller separate templates for easier development/supportability

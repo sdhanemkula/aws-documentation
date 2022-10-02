@@ -10,7 +10,7 @@ There are two ways to look for errors:
 ## Log Insights
 Since step function events are now integrated with cloud watch events we can use Log Insights to run queries against the events to 'find the needle in the haystack'.
 
-```
+```sql
 -- list out last 20 events from a given run
 fields @timestamp, @message
 | filter execution_arn = 'arn:aws:states:us-east-1:885391300939:execution:product-product-ingestor-nightly-dev-ra-json:2a7c3caf-586e-24c3-2fd3-2c26a9908aeb'
@@ -36,7 +36,7 @@ parse @message "* failedTrackingIds*" as @prefix, @failedIdString
 ## AWS CLI/JQ
 These example scripts assume you have jq installed locally! [jq is here](https://stedolan.github.io/jq/)
 
-```
+```sql
 -- get last 3 failures for (rx models statemachine)
 aws stepfunctions list-executions --state-machine-arn arn:aws:states:us-east-1:XXXXXXXXXXX:stateMachine:product-ingestor-nightly-rx-models-prod --status-filter FAILED --max-items 3
 

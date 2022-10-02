@@ -12,7 +12,7 @@ This page summarizes information on API Gateway Service with Lambda integration.
 * Requires very minimal setup on the Gateway
 * Requires lambda to pull out the various HTTP values from the event object or use a framework to handle this for us
 
-```
+```python
 # Python example
 # look into query string parameters for values
 queryStringParameters = event.get('queryStringParameters', None)

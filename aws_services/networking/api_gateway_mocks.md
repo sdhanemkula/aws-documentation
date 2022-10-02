@@ -7,7 +7,7 @@ This page summarizes information on API Gateway Service mocking
 * Still need to setup standard Method Response codes (200, 500, 201, etc.)
 * You can use query string values to vary the returned HTTP status codes by adding logic to the integration response mapping template
 
-```
+```yaml
 # In this example added a query string parameter 'scope' with different values to have API gateway return
 # either 200, 201, or 500
 {

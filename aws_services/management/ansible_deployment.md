@@ -4,7 +4,7 @@
 * Utilize playbooks to group together an application deployment (e.g. ingestion is one playbook, transformation is another playbook)
 
 * Use Ansible roles to logically separate out each component within the playbook (e.g. S3, DB, glue_jobs, etc.) and follow predefined folder structure!
-```
+```yaml
 my_role
 	defaults	(role level global vars)
 	tasks		(role level tasks)
@@ -21,7 +21,7 @@ my_role
 
 * For missing AWS Ansible modules utilize Ansible command and the aws cli (and JSON input where applicable)
 
-```
+```yaml
 - name: Create step function state machine (Nightly Risk Assessments)
   command: >
     aws stepfunctions create-state-machine
@@ -40,7 +40,7 @@ my_role
 ## Dependencies
 * All OPS dependencies should be looked up using SSM parameters and NOT hard coded! Work with the OPS resource to determine required dependency lookup names.
 
-```
+```yaml
 # IAM role
 "{{product_glue_iam_role_name}}"
 # security group id
@@ -49,7 +49,7 @@ my_role
 
 * Make sure all dependencies are retrieved from Nexus!
 
-```
+```yaml
 ## example maven_artifact call using nexus repo
 - name: Download all Required Dependent JARS
   maven_artifact:
@@ -70,7 +70,7 @@ my_role
 ## Output
 * When looping over multiple values utilize the 'loop_control' tag to provide better debug messages
 
-```
+```yaml
 # Ansible to loop through a dictionary
   aws_glue_job:
     name: "{{default_environment_prefix}}-{{item.key}}"
