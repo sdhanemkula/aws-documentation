@@ -5,6 +5,7 @@ The project contains top level folders for:
 * **AWS Services Tips/Tricks (aws_services)** - Specific learnings from AWS services utilized
 * **Security Info (security_info)** - Specific learnings around security on various AWS services
 * **Security Guidelines (security_guidelines)** - Specific questions/guidelines i've learned using various AWS services
+* **CLI Commands** - Useful CLI commands resource
 
 ## AWS Services Tips/Tricks
 The sub folders are arranged by existing AWS service categories including:
