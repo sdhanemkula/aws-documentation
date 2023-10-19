@@ -5,7 +5,7 @@ This page summarizes various guidelines related to the Deployment pillar.
 Relevant guidelines to follow include:
 
 * **All infrastructure must be defined in Code (IaaC)**
-    * Must use either Cloud Formation or SAM templates
+    * Must use either Cloud Formation or SAM templates or Terraform
     * This code should be scanned with tooling for potential security issues (e.g. cloud formation guard, checkov, etc.)
 
 <br/>
@@ -35,5 +35,17 @@ Relevant guidelines to follow include:
     * Testing IaaC code, developer specific testing, etc.
     * Limited to resources developers are permitted to create (e.g. Lambdas, Step functions, but NOT S3 buckets, etc.)
     * Note: remember account level namespacing exists if using developer specific deployments (e.g. Queue names, DB names, etc.)
+
+<br/>
+
+* **ECR private repositories storiing docker images are not configured to have a policy to permit public access**
+
+<br/>
+
+* **Build servers connecting to AWS resources must use access keys (not user/password) and keys should be rotated every month**
+
+<br/>
+
+* **ECR image scanning should be enabled on push if possible**
 
 <br/>

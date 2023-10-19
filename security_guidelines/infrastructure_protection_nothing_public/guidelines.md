@@ -38,3 +38,35 @@ Relevant guidelines to follow include:
 
 <br/>
 
+* **VPC flow logging must be enabled for all regions!**
+
+<br/>
+
+* **AWS 'default' VPC should restrict all public traffic!**
+
+<br/>
+
+* **Ensure no security groups permit ingress from public internet 0.0.0.0/0 to any management ports!**
+
+<br/>
+
+* **If VPC peering is used ensure to only include desired subnets and not entire VPC to VPC CIDRs (least permission approach)!**
+
+<br/>
+
+* **Any public elastic IP should be protected by AWS shield!**
+
+<br/>
+
+* **All EC2 security groups should not permit public access via management ports (e.g. SSH or RDP)!**
+
+<br/>
+
+* **All EC2 security group rules should populate description field indicating desired access**
+
+<br/>
+
+* **All EC2s should NOT have public IP**
+    * Use ALB or equivalant for any public access
+
+<br/>
