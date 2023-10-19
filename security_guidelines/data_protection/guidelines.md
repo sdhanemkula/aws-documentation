@@ -47,5 +47,35 @@ Relevant guidelines to follow include:
     * Example 1: if a lambda is configured to process a SQS readMessage and that lambda throws an exception AWS will retry it only a limited number of times then eventually drop the message (thus leading to data loss).
     * Example 2: Incoming feed lambda listener throws exception while processing file could lead to file not being processed and thus resulting in data loss scenario
 
+<br/>
+
+* **Require server side encryption for any EBS volumes**
+
+<br/>
+
+* **Ensure default encryption is enabled in each account for EBS volumes**
 
 
+<br/>
+
+* **EBS snapshots should not be public accessible**
+
+<br/>
+
+* **EC2 instances should use IMDSV2 to protect instance metadata**
+
+<br/>
+
+* **Encrypt all data at the BUCKET LEVEL using AES-256**
+
+<br/>
+
+* **ALL S3 BUCKETS SHOULD NEVER BE PUBLIC!** 
+    * Use bucket "Block public access" settings [more info here](https://aws.amazon.com/blogs/aws/amazon-s3-block-public-access-another-layer-of-protection-for-your-accounts-and-buckets/)
+
+
+<br/>
+
+* **AWS Workspaces should encrypt all volumes**
+
+<br/>

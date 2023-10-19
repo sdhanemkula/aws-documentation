@@ -57,3 +57,29 @@ Relevant guidelines to follow include:
 <br/>
 
 
+* **Developers should never have own root account user!**
+    * Utilize SSO/IAM identity center for managing accounts
+
+<br/>
+
+
+* **Ensure MFA used for all non service account logins!**
+
+<br/>
+
+* **Remove IAM console access for any service accounts!**
+
+<br/>
+
+* **Any access keys must be rotated every 90 days!**
+
+<br/>
+
+* **Use IAM instance roles for EC2 access to resources (do NOT use user roles)!**
+
+<br/>
+
+* **Ensure IAM policies are only attached to groups/roles**
+    * Avoid using IAM user with policies attached
+
+<br/>

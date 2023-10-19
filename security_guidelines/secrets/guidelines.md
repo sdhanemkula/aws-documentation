@@ -94,3 +94,17 @@ Relevant guidelines to follow include:
 
 <br/>
 
+
+* **If using SSM to store senstive information ensure to use 'SecureString'**
+
+<br/>
+
+* **Do NOT store IAM access keys, etc. w/in SSM parameters**
+
+<br/>
+
+
+* **Never log user/password values w/in code.**
+    * Ansible tip: be careful when storing/using user/password information in dict/template types because default ansible task logging may inadvertantly output the values!
+
+<br/>

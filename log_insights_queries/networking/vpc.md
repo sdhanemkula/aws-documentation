@@ -1,6 +1,6 @@
 # VPC Sample log insights queries
 
-These are ECR related log insights queries
+These are VPC Flow logs related log insights queries
 
 ```bash
 ### log insights query (find all traffic for given destination)

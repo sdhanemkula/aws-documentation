@@ -38,3 +38,40 @@ Relevant guidelines to follow include:
     * DEBUG level debugging can potentially expose dangerous data at times
     * DEBUG logging maybe used in PRD to help resolve issues
     
+
+<br/>
+
+* **If possible enable Guard Duty in all regions**
+
+<br/>
+
+* **If possible enable Macie to scan/indicate all potentially sensitive data**
+
+<br/>
+
+* **If possible enable AWS Shield advanced and ensure any public resources are automatically added (e.g. elastic IPs, etc.)**
+
+<br/>
+
+
+* **Ensure VPC flog logs configured for all VPCs with storage to either cloud watch logs for a minimum duration of 30 days for DEV accounts. Production accounts should be configured to store logs to S3 and store for at least a year**
+
+<br/>
+
+* **Ensure S3 public buckets have access logging enabled**
+
+<br/>
+
+* **Enable Trusted advisor for all DEV accounts and add manual review/application of findings to any sprint cycles (e.g. once a sprint/month/etc.)**
+
+<br/>
+
+
+* **Create a centralized security account to store/analyze all security detection related information from all other AWS accounts w/in the organization**
+    * Store VPC Flog logs, cloud trail logs and other important cloud watch information
+
+<br/>
+
+* **Ensure API Gateway has access logging enabled (esp for public API gateways)**
+
+<br/>
